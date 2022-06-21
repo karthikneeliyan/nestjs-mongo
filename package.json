@@ -26,7 +26,7 @@
     "@nestjs/mapped-types": "*",
     "@nestjs/mongoose": "^9.1.1",
     "@nestjs/platform-express": "^8.0.0",
-    "@types/jsonwebtoken": "^8.5.8",
+  
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.8",
     "password-hash-and-salt": "^0.1.4",
@@ -44,6 +44,7 @@
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "@types/jsonwebtoken": "^8.5.8",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
