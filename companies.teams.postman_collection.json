@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "ac3ab4ff-8c1d-4a4e-8d57-593b2e66bf38",
+		"name": "companies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"admin@123.com\",\n     \"password\": \"YWRtaW5AMTIz\",\n \"roles\":[\"admin\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcomapany",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQDEyMy5jb20iLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE2NTU4MjQyNzV9.rC0NqFx53xTOULUFfrhYt6U5e93am9lgHKhiTUO7CAA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/companies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createcompany",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQDEyMy5jb20iLCJyb2xlcyI6WyJhZG1pbiJdLCJpYXQiOjE2NTU4MjQyNzV9.rC0NqFx53xTOULUFfrhYt6U5e93am9lgHKhiTUO7CAA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"prodapt\",\n     \"ceo\": \"person1\",\n   \"inceptionDate\":\"22/05/1995\",\n     \"address\": \"chennai\",\n   \"_id\":\"62aca97c0adb048adcad4w413\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/companies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcomapanybyid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/companies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchcompanybyname",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/companies/search?name=prodapt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "prodapt"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCompany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"teamLeadName\":\"ram\",\n    \"companyId\":\"62aca97c0adb048adcad4w413\",\n     \"_id\": \"62aca97c0adb048adcasfd44s1e3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/companies/62aca97c0adb048adcad4w413/teams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies",
+						"62aca97c0adb048adcad4w413",
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAllcompany",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"test\":\"prodapt\",\n     \"_id\": \"62aca97c0adb048adcad4413\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/companies/deleteall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies",
+						"deleteall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletelcompany",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"test\":\"prodapt\",\n     \"_id\": \"62aca97c0adb048adcad4413\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/companies/deleteall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies",
+						"deleteall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTeam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"teamLeadName\":\"sibi\",\n    \"companyId\":\"62aca97c0adb048adcad4w413\",\n     \"_id\": \"62aca97c0adb048adca62aca97c0adb048adcad4w413d4w413\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/companies/62aca97c0adb048adcad4w413/teams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies",
+						"62aca97c0adb048adcad4w413",
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getteams",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "updateTeam",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"teamLeadName\":\"ram\",\n    \"companyId\":\"62aca97c0adb048adcad4w413\",\n     \"_id\": \"62aca97c0adb048adcasfd44s1e3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/companies/62aca97c0adb048adcad4w413/teams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies",
+						"62aca97c0adb048adcad4w413",
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteallteam",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/teams/deleteAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"teams",
+						"deleteAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

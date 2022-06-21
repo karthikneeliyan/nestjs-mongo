@@ -29,7 +29,10 @@
     "mongoose": "^6.3.8",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "password-hash-and-salt": "^0.1.4",
+    "jsonwebtoken": "^8.5.1"
+
   },
   "devDependencies": {
     "@nestjs/cli": "^8.0.0",

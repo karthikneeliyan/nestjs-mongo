@@ -59,4 +59,8 @@ $ docker compose up dev
 $ docker compose up prod
 ```
 
+use postman config companies.teams.postman_collection.json
+
+Todo: swagger open api need to be added
+
 

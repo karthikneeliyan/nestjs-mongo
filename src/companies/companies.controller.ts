@@ -1,4 +1,5 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Query, UseGuards } from '@nestjs/common';
+import { AuthenticationGuard } from 'src/guards/authentication.guards';
 import { CreateTeamDto } from 'src/teams/dto/create-team.dto';
 import { TeamsService } from 'src/teams/teams.service';
 import { CompaniesService } from './companies.service';
@@ -6,6 +7,8 @@ import { CreateCompanyDto } from './dto/create-company.dto';
 import { UpdateCompanyDto } from './dto/update-company.dto';
 
 @Controller('companies')
+@UseGuards(AuthenticationGuard)
+
 export class CompaniesController {
 
   constructor(private readonly companiesService: CompaniesService, private teamsService: TeamsService) { }
