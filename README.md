@@ -59,8 +59,12 @@ $ docker compose up dev
 $ docker compose up prod
 ```
 
+use credentials in below postman collections to get the jwt token and attach in authorizarion headers in other endpoints
+
+
 use postman config companies.teams.postman_collection.json
 
 Todo: swagger open api need to be added
+user management 
 
 
